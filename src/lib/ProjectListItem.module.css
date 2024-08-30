@@ -1,0 +1,17 @@
+.container {
+    list-style: none;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: background-color 0.25s;
+}
+
+.container:hover {
+    background-color:rgb(215, 215, 215);
+}
+
+.selected {
+    background-color: aqua;
+}
