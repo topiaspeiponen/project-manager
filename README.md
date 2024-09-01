@@ -1,5 +1,7 @@
 # Project Manager
 
+Exercise problems can be found in ```./problems``` directory.
+
 ## Development
 
 To run the app in a development environment, use the command:
