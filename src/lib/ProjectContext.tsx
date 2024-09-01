@@ -59,6 +59,20 @@ const initialProjects : Project[] = [
       id: 4,
       name: 'Study: new human generation on Mars',
       state: 'Not started'
+    },{
+      id: 5,
+      name: 'Study: new human generation on Mars',
+      state: 'Not started'
+    },
+    {
+      id: 6,
+      name: 'Study: new human generation on Mars',
+      state: 'Not started'
+    },
+    {
+      id: 7,
+      name: 'Study: new human generation on Mars',
+      state: 'Not started'
     }
   ];
   

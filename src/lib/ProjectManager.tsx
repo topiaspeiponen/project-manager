@@ -1,6 +1,7 @@
 import Button from "./Button";
 import { useProjects } from "./ProjectContext";
 import ProjectList from "./ProjectList";
+import styles from './ProjectManager.module.scss';
 
 
 function ProjectManager() {
@@ -27,8 +28,19 @@ function ProjectManager() {
     return (
         <>
             <ProjectList projects={state.projects} selectedProjects={state.selectedProjects} />
-            <Button onClick={launchProject} label="Launch project" />
-            <Button onClick={finishProject} label="Finish project" />
+            <div className={styles['button-container']}>
+                <Button
+                    disabled={
+                        state.selectedProjects.some(proj => proj.state === 'Launched') || state.selectedProjects.length === 0}
+                    variant="primary"
+                    onClick={launchProject}
+                    label="Launch project" />
+                <Button
+                    disabled={state.selectedProjects.length === 0}
+                    variant="secondary"
+                    onClick={finishProject}
+                    label="Finish project" />
+            </div>
         </>
     )
 }

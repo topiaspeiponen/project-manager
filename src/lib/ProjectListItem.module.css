@@ -5,13 +5,23 @@
     border-radius: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    transition: background-color 0.25s;
+    transition: all 0.25s;
+    outline: unset;
 }
 
-.container:hover {
-    background-color:rgb(215, 215, 215);
+.selectable:hover, .selectable:focus-visible {
+    transform: scale(1.05);
 }
 
 .selected {
-    background-color: aqua;
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.selected:focus-visible {
+    outline: #1e3a8a solid 1px;
+}
+
+.finished {
+    background-color: #a8a29e;
 }

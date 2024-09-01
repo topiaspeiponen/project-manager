@@ -1,0 +1,13 @@
+@import "../global.scss";
+
+@media (min-width: $breakpoint-sm) {
+    .button-container {
+        width: 100%;
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+}

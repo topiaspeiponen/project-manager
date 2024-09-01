@@ -15,8 +15,15 @@ function ProjectListItem(props: ProjectListItemProps) {
 
     const classes = classNames({
       [styles.container]: true,
-      [styles.selected]: selected
+      [styles.selected]: selected,
+      [styles.finished] : project.state === 'Finished',
+      [styles.selectable]: project.state !== 'Finished'
     });
+
+    const handleKeyDown = (event : React.KeyboardEvent<HTMLLIElement>) => {
+      console.log('element is the active element ', event.code)
+      if (event.code === 'Enter') selectItem();
+    }
 
     const selectItem = () => {
         if (project.state !== 'Finished') {
@@ -30,7 +37,11 @@ function ProjectListItem(props: ProjectListItemProps) {
     }
 
     return (
-      <li className={classes} onClick={selectItem}>
+      <li
+        className={classes}
+        onClick={selectItem}
+        onKeyDown={(event) => handleKeyDown(event)}
+        tabIndex={project.state !== 'Finished' ? 0 : 1}>
         <h2>{project.name}</h2>
         <p>{project.state}</p>
       </li>
