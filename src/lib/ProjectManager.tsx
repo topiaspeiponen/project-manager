@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { useProjects } from "./ProjectContext";
+import { useProjects } from "./ProjectContextUtils";
 import ProjectList from "./ProjectList";
 import styles from './ProjectManager.module.scss';
 

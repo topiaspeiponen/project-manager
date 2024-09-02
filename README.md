@@ -1,8 +1,12 @@
 # Project Manager
 
-Exercise problems can be found in ```./problems``` directory.
+Exercise problems can be found in ```./problems``` directory. The React project was scaffolded using (Vite react-ts template)[https://vitejs.dev/guide/#scaffolding-your-first-vite-project].
 
 ## Development
+
+Requirements
+- Node.js v20.16.0
+- NPM v10.8.1
 
 To run the app in a development environment, use the command:
 

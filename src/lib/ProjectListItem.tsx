@@ -1,12 +1,12 @@
 import 'react'
 import { Project } from './types';
 import styles from './ProjectListItem.module.css';
-import { useProjects } from './ProjectContext';
+import { useProjects } from './ProjectContextUtils';
 import classNames from 'classnames';
 
 type ProjectListItemProps = {
     project: Project;
-    selected: Boolean;
+    selected: boolean;
 }
 
 function ProjectListItem(props: ProjectListItemProps) {
@@ -20,8 +20,13 @@ function ProjectListItem(props: ProjectListItemProps) {
       [styles.selectable]: project.state !== 'Finished'
     });
 
+    const stateClass = classNames({
+      [styles['state-not-started']]: project.state === 'Not started',
+      [styles['state-launched']]: project.state === 'Launched',
+      [styles['state-finished']]: project.state === 'Finished',
+    })
+
     const handleKeyDown = (event : React.KeyboardEvent<HTMLLIElement>) => {
-      console.log('element is the active element ', event.code)
       if (event.code === 'Enter') selectItem();
     }
 
@@ -43,7 +48,14 @@ function ProjectListItem(props: ProjectListItemProps) {
         onKeyDown={(event) => handleKeyDown(event)}
         tabIndex={project.state !== 'Finished' ? 0 : 1}>
         <h2>{project.name}</h2>
-        <p>{project.state}</p>
+        <div className={styles['state-container']}>
+          <p>{project.state}</p>
+          <span className={stateClass}>
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" />
+            </svg>
+          </span>
+        </div>
       </li>
     )
   }

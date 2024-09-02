@@ -1,5 +1,5 @@
 import './App.scss'
-import { ProjectContextProvider } from './lib/ProjectContext'
+import ProjectContextProvider from './lib/ProjectContext'
 import ProjectManager from './lib/ProjectManager'
 
 function App() {

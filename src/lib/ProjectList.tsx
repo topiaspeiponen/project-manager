@@ -1,5 +1,5 @@
 import 'react'
-import styles from './ProjectList.module.css'
+import styles from './ProjectList.module.scss'
 import ProjectListItem from './ProjectListItem';
 import { Project } from './types';
 

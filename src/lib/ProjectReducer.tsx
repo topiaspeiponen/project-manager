@@ -31,7 +31,7 @@ export function projectReducer(state: ProjectContextState, action: ProjectAction
                     // If project ID is found already in selected, deselect it
                     return {
                         ...state,
-                        selectedProjects: action.payload.projects.filter(selectedProject => selectedProject.id !== action.payload.projects[0].id)
+                        selectedProjects: state.selectedProjects.filter(selectedProject => selectedProject.id !== action.payload.projects[0].id)
                     }
                 }
             }

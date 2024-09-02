@@ -1,6 +1,6 @@
 .container {
     list-style: none;
-    background-color: whitesmoke;
+    background-color: rgb(var(--color-background-primary));
     color: black;
     border-radius: 0.5rem;
     padding-left: 1rem;
@@ -9,19 +9,49 @@
     outline: unset;
 }
 
+.state-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.state-container span {
+    display: flex;
+    width: 16px;
+}
+
+.state-container span circle {
+    fill: inherit;
+    stroke: inherit
+}
+
+.state-not-started {
+    fill: rgb(var(--color-status-red));
+}
+
+.state-launched {
+    fill: rgb(var(--color-status-green));
+}
+
+.state-finished {
+    fill: rgb(var(--color-status-grey));
+}
+
 .selectable:hover, .selectable:focus-visible {
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 
 .selected {
-    background-color: #1e3a8a;
-    color: white;
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-on-primary));
 }
 
 .selected:focus-visible {
-    outline: #1e3a8a solid 1px;
+    outline: rgb(var(--color-primary)) solid 1px;
 }
 
 .finished {
-    background-color: #a8a29e;
+    background-color: rgb(var(--color-disabled));
 }

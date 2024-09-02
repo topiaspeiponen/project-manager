@@ -3,39 +3,30 @@
   line-height: 1.5;
   font-weight: 400;
 
-  
-  --color-primary: 255, 255, 255;
-  --color-on-primary: 47, 47, 47;
-  --color-background-primary: 36, 36, 36;
+  --color-background: 36, 36, 36;
+  --color-disabled: 168, 162, 158;
 
-  color-scheme: light dark;
+  --color-primary: 30, 58, 138;
+  --color-on-primary: white;
+  --color-background-primary: 245, 245, 244;
+
+  --color-secondary: 26, 26, 26;
+  --color-on-secondary: white;
+
+  --color-status-green: 101, 163, 13;
+  --color-status-red: 185, 28, 28;
+  --color-status-grey: 214, 211, 209;
+
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(var(--color-background-primary));
+  background-color: rgb(var(--color-background));
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  align-items: center;
   min-height: 100vh;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-} 

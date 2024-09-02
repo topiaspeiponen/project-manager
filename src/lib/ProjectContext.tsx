@@ -1,25 +1,13 @@
-import { createContext, Dispatch, ReactNode, useContext, useReducer } from "react";
-import { Project, ProjectContextState } from "./types";
-import { ProjectAction, projectReducer } from "./ProjectReducer";
-
-export const ProjectContext = createContext<ProjectContext>({
-    state: {
-      projects: [],
-      selectedProjects: []
-    },
-    dispatch: () => {}
-});
-
-type ProjectContext = {
-    state: ProjectContextState,
-    dispatch: Dispatch<ProjectAction>
-}
+import {  ReactNode, useReducer } from "react";
+import { Project } from "./types";
+import { projectReducer } from "./ProjectReducer";
+import { ProjectContext } from "./ProjectContextUtils";
 
 type ProjectContextProviderProps = {
     children: ReactNode;
 }
 
-export function ProjectContextProvider({ children } : ProjectContextProviderProps) {
+export default function ProjectContextProvider({ children } : ProjectContextProviderProps) {
     const [state, dispatch] = useReducer(
         projectReducer,
         {
@@ -35,11 +23,30 @@ export function ProjectContextProvider({ children } : ProjectContextProviderProp
     )
 }
 
-export function useProjects() {
-    return useContext(ProjectContext);
-}
-
 const initialProjects : Project[] = [
+  {
+    id: 1,
+    name: 'Travel to Mars',
+    state: 'Launched'
+  },
+  {
+    id: 2,
+    name: 'Launching satellite',
+    state: 'Finished'
+  },
+  {
+    id: 3,
+    name: 'Study: growing plants on Mars',
+    state: 'Not started'
+  },
+  {
+    id: 4,
+    name: 'Study: new human generation on Mars',
+    state: 'Not started'
+  }
+];
+
+/*const initialProjectsLong : Project[] = [
     {
       id: 1,
       name: 'Travel to Mars',
@@ -74,5 +81,5 @@ const initialProjects : Project[] = [
       name: 'Study: new human generation on Mars',
       state: 'Not started'
     }
-  ];
+  ];*/
   
