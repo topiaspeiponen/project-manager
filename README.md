@@ -1,6 +1,6 @@
 # Project Manager
 
-Exercise problems can be found in ```./problems``` directory. The React project was scaffolded using (Vite react-ts template)[https://vitejs.dev/guide/#scaffolding-your-first-vite-project].
+Exercise problems can be found in ```./problems``` directory. The React project was scaffolded using [Vite react-ts template](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
 ## Development
 
