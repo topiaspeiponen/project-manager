@@ -2,13 +2,13 @@
  * Adds an onclick event to the provided element
  * @param {string} suggestionElemId 
  * @param {function} suggestionClickEvent 
- * @example suggestionElementPreperation('.main-container', () => console.log('Clicked element'))
+ * @example suggestionElementPreperation('main-container', () => console.log('Clicked element'))
  */
 function suggestionElementPreperation(
-    suggestionElemClass,
+    suggestionElemId,
     suggestionClickEvent
 ) {
-    const suggestionElem = document.querySelector(suggestionElemClass);
+    const suggestionElem = document.getElementById(suggestionElemId);
     suggestionElem.onclick = suggestionClickEvent;
 }
 
