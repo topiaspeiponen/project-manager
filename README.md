@@ -1,5 +1,7 @@
 # Project Manager
 
+This repository contains a small React app for managing the states' of different projects. This is a showcase for a past job interview.
+
 Exercise problems can be found in ```./problems``` directory. The React project was scaffolded using [Vite react-ts template](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
 ## Development
